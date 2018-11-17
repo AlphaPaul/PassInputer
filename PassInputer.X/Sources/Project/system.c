@@ -22,6 +22,7 @@ please contact mla_licensing@microchip.com
 #include "usb.h"
 #include "leds.h"
 #include "buttons.h"
+#include "pass_state.h"
 
 /** CONFIGURATION Bits **********************************************/
 // CONFIG3
@@ -72,6 +73,10 @@ void SYSTEM_Initialize( SYSTEM_STATE state )
             LED_Enable(LED_USB_DEVICE_HID_KEYBOARD_CAPS_LOCK);
             
             BUTTON_Enable(BUTTON_USB_DEVICE_HID_KEYBOARD_KEY);
+            
+            // Initialize the state machine
+            PASS_STATE_init();
+            
             break;
 
         case SYSTEM_STATE_USB_SUSPEND:

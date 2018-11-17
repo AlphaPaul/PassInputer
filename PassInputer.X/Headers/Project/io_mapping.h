@@ -25,5 +25,11 @@ please contact mla_licensing@microchip.com
 #define BUTTON_USB_DEVICE_HID_KEYBOARD_KEY              BUTTON_S3
 #define BUTTON_USB_DEVICE_REMOTE_WAKEUP                 BUTTON_S3
 
+// Definitions for passcode
+#define BUTTON_USB_DEVICE_HID_PASS_1                    BUTTON_S6
+#define BUTTON_USB_DEVICE_HID_PASS_2                    BUTTON_S5
+#define BUTTON_USB_DEVICE_HID_PASS_3                    BUTTON_S4
+
+
 /* USB Stack I/O options. */
 #define self_power                                      1

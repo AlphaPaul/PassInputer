@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Sources/MLA/USB/usb_device.c Sources/MLA/USB/usb_device_hid.c Sources/MLA/USB/usb_hal_16bit.c Sources/Project/app_device_keyboard.c Sources/Project/app_led_usb_status.c Sources/Project/main.c Sources/Project/system.c Sources/Project/usb_descriptors.c Sources/Project/usb_events.c Sources/Project/bsp/buttons.c Sources/Project/bsp/leds.c Sources/Project/pass_state.c Sources/Project/lock_state.c
+SOURCEFILES_QUOTED_IF_SPACED=Sources/MLA/USB/usb_device.c Sources/MLA/USB/usb_device_hid.c Sources/MLA/USB/usb_hal_16bit.c Sources/Project/app_device_keyboard.c Sources/Project/app_led_usb_status.c Sources/Project/main.c Sources/Project/system.c Sources/Project/usb_descriptors.c Sources/Project/usb_events.c Sources/Project/bsp/buttons.c Sources/Project/bsp/leds.c Sources/Project/pass_state.c Sources/Project/lock_state.c Sources/Project/ascii_to_usb_usage.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Sources/MLA/USB/usb_device.o ${OBJECTDIR}/Sources/MLA/USB/usb_device_hid.o ${OBJECTDIR}/Sources/MLA/USB/usb_hal_16bit.o ${OBJECTDIR}/Sources/Project/app_device_keyboard.o ${OBJECTDIR}/Sources/Project/app_led_usb_status.o ${OBJECTDIR}/Sources/Project/main.o ${OBJECTDIR}/Sources/Project/system.o ${OBJECTDIR}/Sources/Project/usb_descriptors.o ${OBJECTDIR}/Sources/Project/usb_events.o ${OBJECTDIR}/Sources/Project/bsp/buttons.o ${OBJECTDIR}/Sources/Project/bsp/leds.o ${OBJECTDIR}/Sources/Project/pass_state.o ${OBJECTDIR}/Sources/Project/lock_state.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/Sources/MLA/USB/usb_device.o.d ${OBJECTDIR}/Sources/MLA/USB/usb_device_hid.o.d ${OBJECTDIR}/Sources/MLA/USB/usb_hal_16bit.o.d ${OBJECTDIR}/Sources/Project/app_device_keyboard.o.d ${OBJECTDIR}/Sources/Project/app_led_usb_status.o.d ${OBJECTDIR}/Sources/Project/main.o.d ${OBJECTDIR}/Sources/Project/system.o.d ${OBJECTDIR}/Sources/Project/usb_descriptors.o.d ${OBJECTDIR}/Sources/Project/usb_events.o.d ${OBJECTDIR}/Sources/Project/bsp/buttons.o.d ${OBJECTDIR}/Sources/Project/bsp/leds.o.d ${OBJECTDIR}/Sources/Project/pass_state.o.d ${OBJECTDIR}/Sources/Project/lock_state.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Sources/MLA/USB/usb_device.o ${OBJECTDIR}/Sources/MLA/USB/usb_device_hid.o ${OBJECTDIR}/Sources/MLA/USB/usb_hal_16bit.o ${OBJECTDIR}/Sources/Project/app_device_keyboard.o ${OBJECTDIR}/Sources/Project/app_led_usb_status.o ${OBJECTDIR}/Sources/Project/main.o ${OBJECTDIR}/Sources/Project/system.o ${OBJECTDIR}/Sources/Project/usb_descriptors.o ${OBJECTDIR}/Sources/Project/usb_events.o ${OBJECTDIR}/Sources/Project/bsp/buttons.o ${OBJECTDIR}/Sources/Project/bsp/leds.o ${OBJECTDIR}/Sources/Project/pass_state.o ${OBJECTDIR}/Sources/Project/lock_state.o ${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/Sources/MLA/USB/usb_device.o.d ${OBJECTDIR}/Sources/MLA/USB/usb_device_hid.o.d ${OBJECTDIR}/Sources/MLA/USB/usb_hal_16bit.o.d ${OBJECTDIR}/Sources/Project/app_device_keyboard.o.d ${OBJECTDIR}/Sources/Project/app_led_usb_status.o.d ${OBJECTDIR}/Sources/Project/main.o.d ${OBJECTDIR}/Sources/Project/system.o.d ${OBJECTDIR}/Sources/Project/usb_descriptors.o.d ${OBJECTDIR}/Sources/Project/usb_events.o.d ${OBJECTDIR}/Sources/Project/bsp/buttons.o.d ${OBJECTDIR}/Sources/Project/bsp/leds.o.d ${OBJECTDIR}/Sources/Project/pass_state.o.d ${OBJECTDIR}/Sources/Project/lock_state.o.d ${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Sources/MLA/USB/usb_device.o ${OBJECTDIR}/Sources/MLA/USB/usb_device_hid.o ${OBJECTDIR}/Sources/MLA/USB/usb_hal_16bit.o ${OBJECTDIR}/Sources/Project/app_device_keyboard.o ${OBJECTDIR}/Sources/Project/app_led_usb_status.o ${OBJECTDIR}/Sources/Project/main.o ${OBJECTDIR}/Sources/Project/system.o ${OBJECTDIR}/Sources/Project/usb_descriptors.o ${OBJECTDIR}/Sources/Project/usb_events.o ${OBJECTDIR}/Sources/Project/bsp/buttons.o ${OBJECTDIR}/Sources/Project/bsp/leds.o ${OBJECTDIR}/Sources/Project/pass_state.o ${OBJECTDIR}/Sources/Project/lock_state.o
+OBJECTFILES=${OBJECTDIR}/Sources/MLA/USB/usb_device.o ${OBJECTDIR}/Sources/MLA/USB/usb_device_hid.o ${OBJECTDIR}/Sources/MLA/USB/usb_hal_16bit.o ${OBJECTDIR}/Sources/Project/app_device_keyboard.o ${OBJECTDIR}/Sources/Project/app_led_usb_status.o ${OBJECTDIR}/Sources/Project/main.o ${OBJECTDIR}/Sources/Project/system.o ${OBJECTDIR}/Sources/Project/usb_descriptors.o ${OBJECTDIR}/Sources/Project/usb_events.o ${OBJECTDIR}/Sources/Project/bsp/buttons.o ${OBJECTDIR}/Sources/Project/bsp/leds.o ${OBJECTDIR}/Sources/Project/pass_state.o ${OBJECTDIR}/Sources/Project/lock_state.o ${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o
 
 # Source Files
-SOURCEFILES=Sources/MLA/USB/usb_device.c Sources/MLA/USB/usb_device_hid.c Sources/MLA/USB/usb_hal_16bit.c Sources/Project/app_device_keyboard.c Sources/Project/app_led_usb_status.c Sources/Project/main.c Sources/Project/system.c Sources/Project/usb_descriptors.c Sources/Project/usb_events.c Sources/Project/bsp/buttons.c Sources/Project/bsp/leds.c Sources/Project/pass_state.c Sources/Project/lock_state.c
+SOURCEFILES=Sources/MLA/USB/usb_device.c Sources/MLA/USB/usb_device_hid.c Sources/MLA/USB/usb_hal_16bit.c Sources/Project/app_device_keyboard.c Sources/Project/app_led_usb_status.c Sources/Project/main.c Sources/Project/system.c Sources/Project/usb_descriptors.c Sources/Project/usb_events.c Sources/Project/bsp/buttons.c Sources/Project/bsp/leds.c Sources/Project/pass_state.c Sources/Project/lock_state.c Sources/Project/ascii_to_usb_usage.c
 
 
 CFLAGS=
@@ -185,6 +185,13 @@ ${OBJECTDIR}/Sources/Project/lock_state.o: Sources/Project/lock_state.c  nbproje
 	${MP_CC} $(MP_EXTRA_CC_PRE)  Sources/Project/lock_state.c  -o ${OBJECTDIR}/Sources/Project/lock_state.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Sources/Project/lock_state.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -I"Headers" -I"Headers/MLA" -I"Headers/MLA/USB" -I"Headers/Project" -I"Headers/Project/bsp" -I"../" -I"../.." -I"./" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/Sources/Project/lock_state.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o: Sources/Project/ascii_to_usb_usage.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/Sources/Project" 
+	@${RM} ${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o.d 
+	@${RM} ${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Sources/Project/ascii_to_usb_usage.c  -o ${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -I"Headers" -I"Headers/MLA" -I"Headers/MLA/USB" -I"Headers/Project" -I"Headers/Project/bsp" -I"../" -I"../.." -I"./" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
 else
 ${OBJECTDIR}/Sources/MLA/USB/usb_device.o: Sources/MLA/USB/usb_device.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/Sources/MLA/USB" 
@@ -276,6 +283,13 @@ ${OBJECTDIR}/Sources/Project/lock_state.o: Sources/Project/lock_state.c  nbproje
 	@${RM} ${OBJECTDIR}/Sources/Project/lock_state.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  Sources/Project/lock_state.c  -o ${OBJECTDIR}/Sources/Project/lock_state.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Sources/Project/lock_state.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -I"Headers" -I"Headers/MLA" -I"Headers/MLA/USB" -I"Headers/Project" -I"Headers/Project/bsp" -I"../" -I"../.." -I"./" -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/Sources/Project/lock_state.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o: Sources/Project/ascii_to_usb_usage.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/Sources/Project" 
+	@${RM} ${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o.d 
+	@${RM} ${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  Sources/Project/ascii_to_usb_usage.c  -o ${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O0 -I"Headers" -I"Headers/MLA" -I"Headers/MLA/USB" -I"Headers/Project" -I"Headers/Project/bsp" -I"../" -I"../.." -I"./" -msmart-io=1 -Wall -msfr-warn=off  
+	@${FIXDEPS} "${OBJECTDIR}/Sources/Project/ascii_to_usb_usage.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
 

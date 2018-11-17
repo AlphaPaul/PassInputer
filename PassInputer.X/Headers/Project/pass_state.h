@@ -12,7 +12,7 @@
 extern "C" {
 #endif
 
-    // Pass state simply sends characters in order of a passcode.
+    // Pass state simply sends characters in order of a password.
     // For instance, if the pass is "Hello World", it will send 
     // successive ASCII values for 'H', 'e', 'l' ...
     
@@ -20,9 +20,9 @@ extern "C" {
     //
     // External Function Definition
     //
-    void pass_state_init();
+    void PASS_STATE_init();
     
-    char pass_state();
+    char PASS_STATE_state();
 
 
 #ifdef	__cplusplus

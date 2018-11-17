@@ -33,6 +33,7 @@ please contact mla_licensing@microchip.com
 
 #include "usb_config.h"
 #include "usb_common.h"
+#include "usb_device.h"
 
 /*****************************************************************************/
 /****** Constant definitions *************************************************/

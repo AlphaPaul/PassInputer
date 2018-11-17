@@ -26,6 +26,7 @@
       <itemPath>Headers/Project/usb_config.h</itemPath>
       <itemPath>Headers/Project/pass_state.h</itemPath>
       <itemPath>Headers/Project/lock_state.h</itemPath>
+      <itemPath>Headers/Project/ascii_to_usb_usage.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -51,6 +52,7 @@
       <itemPath>Sources/Project/usb_events.c</itemPath>
       <itemPath>Sources/Project/pass_state.c</itemPath>
       <itemPath>Sources/Project/lock_state.c</itemPath>
+      <itemPath>Sources/Project/ascii_to_usb_usage.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

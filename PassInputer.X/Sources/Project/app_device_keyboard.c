@@ -31,6 +31,10 @@ please contact mla_licensing@microchip.com
 
 #include "app_led_usb_status.h"
 
+
+#include "pass_state.h"
+#include "ascii_to_usb_usage.h"
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: File Scope or Global Constants
@@ -223,6 +227,10 @@ typedef struct
     USB_HANDLE lastOUTTransmission;
     unsigned char key;
     bool waitingForRelease;
+    unsigned char doubleKeyCounter;
+    char isShift;
+    char isAltGr;
+    
 } KEYBOARD;
 
 // *****************************************************************************
@@ -251,7 +259,7 @@ static volatile KEYBOARD_OUTPUT_REPORT outputReport KEYBOARD_OUTPUT_REPORT_DATA_
 static void APP_KeyboardProcessOutputReport(void);
 
 
-//Exteranl variables declared in other .c files
+//External variables declared in other .c files
 extern volatile signed int SOFCounter;
 
 
@@ -280,6 +288,7 @@ void APP_KeyboardInit(void)
 
     //Set the default idle rate to 500ms (until the host sends a SET_IDLE request to change it to a new value)
     keyboardIdleRate = 500;
+    keyboard.doubleKeyCounter = 0;
 
     //Copy the (possibly) interrupt context SOFCounter value into a local variable.
     //Using a while() loop to do this since the SOFCounter isn't necessarily atomically
@@ -301,6 +310,10 @@ void APP_KeyboardTasks(void)
     signed int TimeDeltaMilliseconds;
     unsigned char i;
     bool needToSendNewReportPacket;
+    char passChar;
+    char isShift;
+    char isAltGr;
+    unsigned char retCode;
 
     /* If the USB device isn't configured yet, we can't really do anything
      * else since we don't have a host to talk to.  So jump back to the
@@ -360,13 +373,49 @@ void APP_KeyboardTasks(void)
         /* Clear the INPUT report buffer.  Set to all zeros. */
         memset(&inputReport, 0, sizeof(inputReport));
 
+        // Keys are ignored when the same key is pressed twice consecutively
+        // So if we see the same usb code, we should wait.
+        if(keyboard.doubleKeyCounter > 0){
+            keyboard.doubleKeyCounter --;
+        }
+        if(keyboard.doubleKeyCounter == 1){
+            // We send the previous char
+            inputReport.keys[0] = keyboard.key;
+            inputReport.modifiers.bits.rightAlt = (keyboard.isAltGr ? 1 : 0);
+            inputReport.modifiers.bits.leftShift = (keyboard.isShift ? 1 : 0);
+        }
+        if(keyboard.doubleKeyCounter == 0) {
+            // We get a new char
+            passChar = PASS_STATE_state();
+            if (passChar != 0) {
+                if (ascii_to_usb(passChar, &retCode, &isShift, &isAltGr) != 0) {
+
+                    keyboard.isAltGr = isAltGr;
+                    keyboard.isShift = isShift;
+                    if (retCode == keyboard.key) {
+                        keyboard.doubleKeyCounter = 6;
+                        keyboard.key = retCode;
+                    } else {
+                        keyboard.key = retCode;
+                        inputReport.keys[0] = keyboard.key;
+                        inputReport.modifiers.bits.rightAlt = (keyboard.isAltGr ? 1 : 0);
+                        inputReport.modifiers.bits.leftShift = (keyboard.isShift ? 1 : 0);
+                    }
+                } else {
+
+                }
+            }
+        }
+        
+        
+        
         if(BUTTON_IsPressed(BUTTON_USB_DEVICE_HID_KEYBOARD_KEY) == true)
         {
             if(keyboard.waitingForRelease == false)
             {
                 keyboard.waitingForRelease = true;
 
-                /* Set the only important data, the key press data. */
+                // Set the only important data, the key press data.
                 inputReport.keys[0] = keyboard.key++;
 
                 //In this simulated keyboard, if the last key pressed exceeds the a-z + 0-9,
@@ -381,6 +430,7 @@ void APP_KeyboardTasks(void)
         {
             keyboard.waitingForRelease = false;
         }
+        
 
         //Check to see if the new packet contents are somehow different from the most
         //recently sent packet contents.
